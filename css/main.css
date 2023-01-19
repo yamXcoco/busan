@@ -24,12 +24,12 @@ ul {
   /* height: 90px; */
   display: flex;
   justify-content: right;
-  /* position: relative; */
+  position: relative;
 }
 .header > img {
   position: absolute;
   top: 0;
-  left: 20%;
+  left: 1%;
 }
 .nav {
   /* width: 1540px; */
@@ -267,6 +267,7 @@ ul {
 .banner05 ul li a {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #fff;
 }
 .banner05 ul li a p:last-child {
   font-size: 8px;
