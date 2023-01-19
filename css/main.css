@@ -29,7 +29,7 @@ ul {
 .header > img {
   position: absolute;
   top: 0;
-  left: 1%;
+  left: 0;
 }
 .nav {
   /* width: 1540px; */
@@ -42,6 +42,7 @@ ul {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 26px;
   font-weight: 700;
+  margin-right: 80px;
 }
 .Bnav li {
   margin-left: 30px;
@@ -334,6 +335,19 @@ ul {
 }
 
 /* sub_01 */
+.container_p2,
+.container_p3 {
+  position: relative;
+}
+.container_p2 > img,
+.container_p3 > img {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: -200px;
+  transform: translate(-50%, 0);
+  z-index: -100;
+}
 .container_p2 .banner01 {
   display: flex;
   justify-content: center;
@@ -508,7 +522,7 @@ ul {
 }
 
 /* sub_02 */
-.container_p3 {
+.container_p3 .total {
   width: 1290px;
   margin: 0 auto;
 }
@@ -534,6 +548,7 @@ ul {
   background-size: cover;
   position: relative;
   margin-bottom: 50px;
+  border-radius: 20px;
 }
 .container_p3 .banner02 .content2 ul {
   position: absolute;
@@ -553,6 +568,7 @@ ul {
   position: relative;
 }
 .container_p3 .banner02 .content2 ul li::after {
+  transition: all 0.3s;
   content: '';
   position: absolute;
   width: 0;
@@ -600,8 +616,7 @@ ul {
   background-color: #293b94;
   border-radius: 10px;
 }
-.container_p3 .banner03 .content2 .text {
-}
+
 .container_p3 .banner03 .content2 .text h2 {
   font-style: 34px;
   color: #666666;
@@ -664,9 +679,11 @@ ul {
 .container_p3 .banner04 .content2 .right pre {
   padding: 50px;
   font-size: 20px;
+  font-weight: 800;
   color: #293b94;
   display: flex;
   align-items: center;
+
   /* height: 30px;
   line-height: 30px; */
 }
@@ -697,9 +714,12 @@ ul {
   flex-wrap: wrap;
 }
 .container_p3 .banner04 .content3 ul li {
+  display: flex;
+  align-items: center;
   height: 30px;
   padding: 0 14px;
-  border: 1px solid #7a7a7a;
+  border: 1px solid #a3a3a3;
+  color: #0593d1;
   border-radius: 20px;
 }
 .container_p3 .banner04 .content3 h1 {
