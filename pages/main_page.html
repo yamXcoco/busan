@@ -9,6 +9,19 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
+    <!-- xi아이콘 -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <!-- jquery -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <!-- slide -->
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -16,10 +29,10 @@
       <img src="/img/page1_visit.png" alt="" />
       <div class="nav">
         <ul class="Bnav">
-          <li><a href="#x">부산에가면</a></li>
-          <li><a href="#x">추천여행</a></li>
-          <li><a href="#x">여행준비</a></li>
-          <li><a href="#x">유용한정보</a></li>
+          <li><a href="/pages/sub_page01.html">부산에가면</a></li>
+          <li><a href="/pages/sub_page01.html">추천여행</a></li>
+          <li><a href="/pages/sub_page01.html">여행준비</a></li>
+          <li><a href="/pages/sub_page01.html">유용한정보</a></li>
         </ul>
         <ul class="Snav">
           <li><a href="#x">검색하기</a></li>
@@ -33,6 +46,15 @@
     <div class="container">
       <div class="banner01">
         <!-- 백그라운드 이미지 넣기 -->
+        <div class="slide_01">
+          <div class="item item_01"></div>
+          <div class="item item_02"></div>
+          <div class="item item_03"></div>
+          <div class="item item_04"></div>
+          <div class="item item_05"></div>
+          <div class="item item_06"></div>
+        </div>
+
         <div class="content">
           <div class="content_box">
             <div class="box_1">
@@ -296,5 +318,12 @@
         </li>
       </ul>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $('.slide_01').slick({
+        autoplay: true,
+        dots: true,
+      })
+    </script>
   </body>
 </html>

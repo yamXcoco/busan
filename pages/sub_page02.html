@@ -9,17 +9,20 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/event.css" />
   </head>
   <body>
     <div class="header">
       <img src="/img/page1_visit.png" alt="" />
       <div class="nav">
         <ul class="Bnav">
-          <li><a href="#x">부산에가면</a></li>
-          <li><a href="#x">추천여행</a></li>
-          <li><a href="#x">여행준비</a></li>
-          <li><a href="#x">유용한정보</a></li>
+          <li><a href="/pages/sub_page01.html">부산에가면</a></li>
+          <li><a href="/pages/sub_page01.html">추천여행</a></li>
+          <li><a href="/pages/sub_page01.html">여행준비</a></li>
+          <li><a href="/pages/sub_page01.html">유용한정보</a></li>
         </ul>
         <ul class="Snav">
           <li><a href="#x">검색하기</a></li>
@@ -32,6 +35,7 @@
     </div>
     <div class="container_p3">
       <img src="/img/background.png" alt="" />
+
       <div class="total">
         <div class="banner01">
           <div class="content1">
@@ -72,12 +76,16 @@
         <div class="banner03">
           <!-- <div class="main_b1"> -->
           <div class="content1">
-            <img src="/img/page2_s.png" alt="" />
+            <div class="light">
+              <img src="/img/page2_s.png" data="/img/p3_dimm.png" />
+            </div>
           </div>
           <div class="content2">
             <div class="box1">
               <div class="right">
-                <img src="/img/p3_minibar.png" alt="" />
+                <div class="light">
+                  <img src="/img/p3_minibar.png" alt="" />
+                </div>
                 <h1>민락수변공원</h1>
               </div>
               <div class="left">
@@ -150,10 +158,14 @@
               301동 앞에 위치한 자전거 무료대여소를 이용해보는 것도 좋다.
               신분증만 맡기면 누구나 자전거를 무료로 대여할 수 있다.
             </p>
-            <img src="/img/3-3 1.png" alt="" />
+            <div class="light">
+              <img src="/img/3-3 1.png" data="/img/p3_dimm2.png" alt="" />
+            </div>
             <div class="imgs">
-              <img src="/img/3-4 1.png" alt="" />
-              <img src="/img/3-5 1.png" alt="" />
+              <div class="light">
+                <img src="/img/3-4 1.png" data="/img/p3_dimm3.png" alt="" />
+                <img src="/img/3-5 1.png" data="/img/p3_dimm4.png" alt="" />
+              </div>
             </div>
             <h2>
               푸른 바다의 탁 트인 풍경은 보는 이들의 마음까지 시원하게 해주는
@@ -217,7 +229,7 @@
           <div class="content4">
             <div class="box1">
               <h1>관련여행지</h1>
-              <ul>
+              <ul class="s_box">
                 <li>
                   <img src="/img/page3_01.png" alt="" />
                   <div class="text_box">
@@ -306,5 +318,38 @@
         </li>
       </ul>
     </div>
+
+    <div class="dimm">
+      <img src="" alt="" />
+    </div>
+
+    <script>
+      var item = $('.light')
+      var dimm = $('.dimm')
+
+      item.click(function () {
+        var dataImg = $(this).find('img').attr('data')
+
+        dimm.addClass('show')
+        dimm.find('img').attr('src', dataImg)
+
+        dimm.click(function () {
+          $(this).removeClass('show')
+        })
+      })
+
+      var item = $('.s_box li')
+      // var item = $('.text_box')
+      var time = 400
+
+      item
+
+        .mouseenter(function () {
+          $(this).find('.text_box').stop().animate({ bottom: 0 }, time)
+        })
+        .mouseleave(function () {
+          $(this).find('.text_box').stop().animate({ bottom: -40 }, time)
+        })
+    </script>
   </body>
 </html>
