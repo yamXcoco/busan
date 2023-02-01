@@ -48,7 +48,7 @@ ul {
   justify-content: right;
   position: relative;
 }
-.header > img {
+.header>a>img {
   position: absolute;
   top: 0;
   left: 0;
@@ -786,6 +786,11 @@ ul {
   border: 1px solid #a3a3a3;
   color: #0593d1;
   border-radius: 20px;
+  cursor: pointer;
+}
+.container_p3 .banner04 .content3 ul li:hover{
+  background-color: #0593d1;
+  color: white;
 }
 .container_p3 .banner04 .content3 h1 {
   font-size: 24px;
