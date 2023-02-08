@@ -100,7 +100,7 @@ ul {
   background-size: cover;
   margin: 0 auto;
   height: 784px;
-  background-image: url(/img/p1_bg1.png);
+  background-image: url('../img/p1_bg1.png');
   position: relative;
 }
 
@@ -112,22 +112,22 @@ ul {
   background-size: cover;
 }
 .slide_01 .item.item_01 {
-  background-image: url(../img/p1_bg1.png);
+  background-image: url('../img/p1_bg1.png');
 }
 .slide_01 .item.item_02 {
-  background-image: url(../img/p1_bg2.png);
+  background-image: url('../img/p1_bg2.png');
 }
 .slide_01 .item.item_03 {
-  background-image: url(../img/p1_bg6.png);
+  background-image: url('../img/p1_bg6.png');
 }
 .slide_01 .item.item_04 {
-  background-image: url(../img/p1_bg5.png);
+  background-image: url('../img/p1_bg5.png');
 }
 .slide_01 .item.item_05 {
-  background-image: url(../img/p1_bg4.png);
+  background-image: url('../img/p1_bg4.png');
 }
 .slide_01 .item.item_06 {
-  background-image: url(../img/p1_bg3.png);
+  background-image: url('../img/p1_bg3.png');
 }
 
 .container .banner01 .content {
@@ -236,22 +236,22 @@ ul {
   background-size: cover;
 }
 .container .banner02 ul .c_01 .bg {
-  background-image: url(/img/p1_1.png);
+  background-image: url('../img/p1_1.png');
 }
 .container .banner02 ul .c_02 .bg {
-  background-image: url(/img/p1_2.png);
+  background-image: url('../img/p1_2.png');
 }
 .container .banner02 ul .c_03 .bg {
-  background-image: url(/img/p1_3.png);
+  background-image: url('../img/p1_3.png');
 }
 .container .banner02 ul .c_04 .bg {
-  background-image: url(/img/p1_4.png);
+  background-image: url('../img/p1_4.png');
 }
 .container .banner02 ul .c_05 .bg {
-  background-image: url(/img/p1_5.png);
+  background-image: url('../img/p1_5.png');
 }
 .container .banner02 ul .c_06 .bg {
-  background-image: url(/img/p1_6.png);
+  background-image: url('../img/p1_6.png');
 }
 .container .banner03 {
   width: 940px;
@@ -298,7 +298,7 @@ ul {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  background-image: url(/img/page1_banner.png);
+  background-image: url('../img/page1_banner.png');
   margin-bottom: 100px;
 }
 .container .banner05 .text {
@@ -608,7 +608,7 @@ ul {
 }
 .container_p3 .banner02 .content2 {
   height: 510px;
-  background-image: url(/img/3-1\ 1.png);
+  background-image: url('../img/3-1\ 1.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
