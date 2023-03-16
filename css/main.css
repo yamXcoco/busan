@@ -1,29 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR&display=swap');
-
+:root {
+  --primary: #222;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 ul {
   list-style: none;
 }
 .body {
+  color: var(--primary);
   font-family: 'Nanum Gothic', sans-serif;
-  /* font-family: 'Noto Sans KR', sans-serif; */
-  width: 1920px;
 }
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+/* slide */
 .slide_01 .slick-dots {
   top: 850px;
-}
-.slide_01 .slick-dots li {
-  width: initial;
+  right: 50%;
+  transform: translateX(50%);
 }
 .slide_01 .slick-dots li button {
   background-color: #0593d1;
@@ -40,60 +43,53 @@ ul {
   opacity: 0.7;
   width: 50px;
 }
+/* header */
 .header {
-  width: 1540px;
+  width: 100%;
   margin: 0 auto;
-  /* height: 90px; */
-  display: flex;
-  justify-content: right;
   position: relative;
 }
-.header>a>img {
+.header > a > img {
   position: absolute;
   top: 0;
   left: 0;
+  padding-left: 200px;
   z-index: 1;
 }
 .nav {
-  /* width: 1540px; */
   display: flex;
-  height: 90px;
-  line-height: 90px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
 }
 .Bnav {
   display: flex;
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  margin-right: 80px;
-}
-.Bnav li {
-  margin-left: 30px;
-  opacity: 80px;
+  font-size: 20px;
+  font-weight: 600;
+  gap: 40px;
+  justify-content: center;
 }
 .Bnav li:hover {
   color: #0593d1;
 }
 .Snav {
+  position: absolute;
+  right: 200px;
   display: flex;
-  margin-left: 140px;
-  font-size: 17px;
+  font-size: 15px;
+  gap: 30px;
 }
 .Snav li:hover {
   color: #0593d1;
 }
-.Snav li {
-  margin-left: 10px;
-}
 .container .banner01 {
-  width: 1920px;
+  max-width: 1920px;
   margin: 0 auto;
   height: 784px;
-
   position: relative;
 }
 .container_p2 .banner01 {
-  /* width: 1920px; */
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -103,9 +99,8 @@ ul {
   background-image: url('../img/p1_bg1.png');
   position: relative;
 }
-
 .slide_01 .item {
-  width: 1920px;
+  width: 100%;
   height: 784px;
   background-repeat: no-repeat;
   background-position: center;
@@ -167,28 +162,28 @@ ul {
 .container .banner01 .text_box {
   position: absolute;
   background-color: #f6f7f9;
-  width: 1288px;
   height: 80px;
-  border-radius: 10px;
   line-height: 80px;
+  border-radius: 10px;
   bottom: -5%;
+  width: 1100px;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
   justify-content: space-between;
 }
 .container .banner01 .text_box h3 {
-  margin-left: 50px;
+  padding-left: 50px;
   font-size: 26px;
 }
 .container .banner01 .imgbox {
-  margin-right: 50px;
+  padding-right: 50px;
   display: flex;
   font-size: 30px;
   font-weight: bold;
 }
 .container .banner01 .imgbox li {
-  margin-left: 20px;
+  padding-left: 20px;
 }
 .container .banner02 {
   width: 940px;
@@ -354,15 +349,16 @@ ul {
   color: #666666;
 }
 .footer {
+  max-width: 1920px;
   margin-top: 160px;
   height: 440px;
   background-color: #2b323a;
 }
 .footer ul {
-  width: 1540px;
+  max-width: 1540px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   opacity: 70%;
 }
 .footer ul li h1 {
@@ -788,7 +784,7 @@ ul {
   border-radius: 20px;
   cursor: pointer;
 }
-.container_p3 .banner04 .content3 ul li:hover{
+.container_p3 .banner04 .content3 ul li:hover {
   background-color: #0593d1;
   color: white;
 }
@@ -836,4 +832,142 @@ ul {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.post-slider {
+  max-width: 1050px;
+  margin: 0 auto;
+  position: relative;
+}
+.post-slider .silder-title {
+  text-align: center;
+  margin: 30px auto;
+  padding-top: 100px;
+}
+.post-slider .next {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+.post-slider .prev {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+.post-slider .post-wrapper {
+  width: 84%;
+  height: 350px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+}
+.post-slider .post-wrapper .post {
+  width: 300px;
+  height: 300px;
+  margin: 0px 10px;
+  display: inline-block;
+  background: white;
+  border-radius: 5px;
+}
+.post-slider .post-wrapper .post .post-info {
+  font-size: 22px;
+  letter-spacing: -0.1em;
+  color: #4e4e4e;
+}
+.post-slider .post-wrapper .post .post-info i {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666666;
+  letter-spacing: -0.1em;
+}
+.post-slider .post-wrapper .post .slider-image {
+  width: 100%;
+  height: 175px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    background-color: #0593d1;
+    line-height: 70px;
+  }
+  .header ul {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100%;
+    background-color: #4f4cb1;
+    flex-direction: column;
+    gap: 60px;
+    font-size: 30px;
+    transition: left 0.3s;
+    z-index: 2;
+    padding: 60px 0;
+    align-items: center;
+  }
+  .header ul.active {
+    left: 0;
+  }
+  .header ul li {
+    margin: 0;
+  }
+  .header .nav .bars {
+    width: 50px;
+    display: block;
+    z-index: 10;
+  }
+  .header > a > img {
+    padding-left: 0px;
+    width: 70px;
+  }
+  .nav {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+  }
+  .Bnav {
+    display: flex;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    gap: 40px;
+    justify-content: center;
+  }
+  .Bnav li:hover {
+    color: #0593d1;
+  }
+  .Snav {
+    position: absolute;
+    right: 200px;
+    display: flex;
+    font-size: 15px;
+    gap: 30px;
+  }
+  .Snav li:hover {
+    color: #0593d1;
+  }
+  .container .banner01 {
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 784px;
+    position: relative;
+  }
+  .container_p2 .banner01 {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    height: 784px;
+    background-image: url('../img/p1_bg1.png');
+    position: relative;
+  }
 }
