@@ -22,27 +22,7 @@ ul {
   max-width: 1920px;
   margin: 0 auto;
 }
-/* slide */
-.slide_01 .slick-dots {
-  top: 850px;
-  right: 50%;
-  transform: translateX(50%);
-}
-.slide_01 .slick-dots li button {
-  background-color: #0593d1;
-  width: 18px;
-  height: 18px;
-  border-radius: 18px;
-  opacity: 0.2;
-  transition: width 0.3s;
-}
-.slide_01 .slick-dots li button::before {
-  display: none;
-}
-.slide_01 .slick-dots li.slick-active button {
-  opacity: 0.7;
-  width: 50px;
-}
+
 /* header */
 .header {
   width: 100%;
@@ -98,6 +78,26 @@ ul {
   height: 784px;
   background-image: url('../img/p1_bg1.png');
   position: relative;
+}
+.slide_01 .slick-dots {
+  top: 850px;
+  right: 50%;
+  transform: translateX(50%);
+}
+.slide_01 .slick-dots li button {
+  background-color: #0593d1;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  opacity: 0.2;
+  transition: width 0.3s;
+}
+.slide_01 .slick-dots li button::before {
+  display: none;
+}
+.slide_01 .slick-dots li.slick-active button {
+  opacity: 0.7;
+  width: 50px;
 }
 .slide_01 .item {
   width: 100%;
@@ -895,15 +895,17 @@ ul {
   .header {
     height: 70px;
     background-color: #0593d1;
-    line-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
   }
-  .header ul {
+  .header .Bnav {
     position: fixed;
-    top: 0;
+    top: -30%;
     left: 100%;
     width: 100vw;
     height: 100%;
-    background-color: #4f4cb1;
+    background-color: #ffffff;
     flex-direction: column;
     gap: 60px;
     font-size: 30px;
@@ -912,62 +914,94 @@ ul {
     padding: 60px 0;
     align-items: center;
   }
-  .header ul.active {
+  .header .Snav {
+    display: none;
+  }
+  .header .Bnav.active {
     left: 0;
   }
-  .header ul li {
-    margin: 0;
-  }
   .header .nav .bars {
-    width: 50px;
-    display: block;
+    font-size: 30px;
     z-index: 10;
+    padding: 0 20px;
   }
   .header > a > img {
     padding-left: 0px;
-    width: 70px;
+    height: 70px;
   }
-  .nav {
-    display: flex;
-    height: 80px;
-    align-items: center;
-    justify-content: center;
+  .slide_01 .slick-dots {
+    top: 400px;
   }
-  .Bnav {
-    display: flex;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    gap: 40px;
-    justify-content: center;
+  .slide_01 .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
   }
-  .Bnav li:hover {
-    color: #0593d1;
+  .slide_01 .slick-dots li.slick-active button {
+    width: 40px;
   }
-  .Snav {
-    position: absolute;
-    right: 200px;
-    display: flex;
-    font-size: 15px;
-    gap: 30px;
+  .slide_01 .item {
+    height: 320px;
   }
-  .Snav li:hover {
-    color: #0593d1;
-  }
-  .container .banner01 {
-    max-width: 1920px;
-    margin: 0 auto;
-    height: 784px;
-    position: relative;
-  }
-  .container_p2 .banner01 {
+  .container .banner01 .content {
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  }
+  .container .banner01 .box_1 {
+    top: -10%;
+    left: 20px;
+    margin-top: 136px;
+  }
+  .container .banner01 .box_1 h1 {
+    font-size: 12px;
+  }
+  .container .banner01 .box_1 h2 {
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: -0.05em;
+    margin-top: 20px;
+  }
+  .container .banner01 .box_2 {
+    position: absolute;
+    top: 250px;
+    right: 0px;
+  }
+  .container .banner01 .box_2 img {
+    width: 120px;
+    padding-right: 20px;
+  }
+  .container .banner01 .text_box {
+    position: absolute;
+    background-color: #f6f7f9;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 10px;
+    bottom: -5%;
+    width: 1100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .banner01 .text_box h3 {
+    padding-left: 50px;
+    font-size: 26px;
+  }
+  .container .banner01 .imgbox {
+    padding-right: 50px;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .container .banner01 .imgbox li {
+    padding-left: 20px;
+  }
+  .container .banner02 {
+    width: 940px;
     margin: 0 auto;
-    height: 784px;
-    background-image: url('../img/p1_bg1.png');
-    position: relative;
+    margin-top: 150px;
+  }
+  .container .banner02 h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
   }
 }

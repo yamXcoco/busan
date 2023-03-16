@@ -28,7 +28,7 @@
     <div class="container">
       <div class="header">
         <a href="#x">
-          <img src="./img/page1_visit.png" alt="" />
+          <img src="./img/page1_visit 1.png" alt="" />
         </a>
         <div class="nav">
           <ul class="Bnav">
@@ -358,13 +358,27 @@
         autoplaySpeed: 2000,
         nextArrow: $('.next'),
         prevArrow: $('.prev'),
+        responsive: [
+          {
+            breakpoint: 960,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       })
     </script>
     <script>
       let bg = document.querySelector('.bg')
       var width_size = window.innerWidth
       $('.bars').click(function () {
-        $('.gnb').toggleClass('active')
+        $('.Bnav').toggleClass('active')
         $(this).find('i').toggleClass('xi-close')
       })
     </script>
