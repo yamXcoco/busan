@@ -42,13 +42,11 @@
             <li><a href="#x">로그인</a></li>
             <li><a href="#x">마이페이지</a></li>
             <li><a href="#x">Language</a></li>
-            <!-- 마우스 커서 닿으면 파랗게 -->
           </ul>
           <div class="bars"><i class="xi-bars"></i></div>
         </div>
       </div>
       <div class="banner01">
-        <!-- 백그라운드 이미지 넣기 -->
         <div class="slide_01">
           <div class="item item_01"></div>
           <div class="item item_02"></div>
@@ -198,7 +196,6 @@
           </div>
         </div>
       </div>
-      <ul class="banner03"></ul>
       <ul class="banner04">
         <li>
           <a href="#x">
@@ -379,6 +376,7 @@
       var width_size = window.innerWidth
       $('.bars').click(function () {
         $('.Bnav').toggleClass('active')
+        $('.Snav').toggleClass('active')
         $(this).find('i').toggleClass('xi-close')
       })
     </script>
